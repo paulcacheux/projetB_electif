@@ -1,0 +1,41 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_peek.2,(_f(22) => _f(24));
+_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_peek.1,(_f(22) => _f(23));
+_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_pop.2,(_f(22) => _f(24));
+_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_pop.1,(_f(22) => _f(23));
+_f(1) & _f(2) & _f(8) & _f(12) & pop.1,(_f(3) & _f(6) => _f(13));
+_f(1) & _f(2) & _f(8) & _f(9) & push.2,(_f(3) & _f(6) => _f(11));
+_f(1) & _f(2) & _f(8) & _f(9) & push.1,(_f(3) & _f(4) => _f(10));
+_f(1) & _f(2) & Initialisation.2,(_f(3) & _f(6) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) & _f(4) => _f(5))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+MaxSize : INTEGER & 0 <= MaxSize & ((MaxSize) : (NATURAL)) & (0 +1 <= MaxSize);
+"Invariant is preserved";
+"Check invariant ((values) : (((((0) .. ((MaxSize - 1)))) --> (NATURAL))))";
+(((((0) .. ((MaxSize - 1))) * ({0}))) : (((((0) .. ((MaxSize - 1)))) --> (NATURAL))));
+"Check invariant ((ptr) : (((0) .. (MaxSize))))";
+((0) : (((0) .. (MaxSize))));
+values : ((0) .. ((MaxSize - 1))) +-> NATURAL & dom(values) = ((0) .. ((MaxSize - 1))) & ((values) : (((((0) .. ((MaxSize - 1)))) --> (NATURAL)))) & ((ptr) : (((0) .. (MaxSize))));
+((ptr) : (((0) .. ((MaxSize - 1))))) & value : INTEGER & 0 <= value & ((value) : (NATURAL));
+((((values) <+ (({((ptr) |-> (value))})))) : (((((0) .. ((MaxSize - 1)))) --> (NATURAL))));
+(((ptr + 1)) : (((0) .. (MaxSize))));
+(0 +1 <= ptr);
+(((ptr - 1)) : (((0) .. (MaxSize))));
+btrue;
+MaxSize : INTEGER;
+0 <= MaxSize;
+((MaxSize) : (NATURAL));
+values : ((0) .. ((MaxSize - 1))) +-> NATURAL;
+dom(values) = ((0) .. ((MaxSize - 1)));
+((values) : (((((0) .. ((MaxSize - 1)))) --> (NATURAL))));
+((ptr) : (((0) .. ((MaxSize - 1)))));
+"Well definedness";
+(((ptr - 1)) : (dom(values)));
+((values) : (((dom(values)) +-> (ran(values)))))
+END
+&
+THEORY EnumerateX
+END

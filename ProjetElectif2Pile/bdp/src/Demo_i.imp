@@ -1,0 +1,15 @@
+﻿/* Demo_i
+ * Author: Paul
+ * Creation date: 22/05/2019
+ */
+
+IMPLEMENTATION Demo_i
+REFINES Demo
+IMPORTS
+    Pile
+
+OPERATIONS
+    demo = BEGIN
+       skip
+    END
+END

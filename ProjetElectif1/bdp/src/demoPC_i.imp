@@ -1,0 +1,21 @@
+﻿/* demoPC_i
+ * Author: Paul
+ * Creation date: 21/05/2019
+ */
+
+IMPLEMENTATION demoPC_i
+REFINES demoPC
+IMPORTS Parameters , ProducerConsumer
+
+OPERATIONS
+    demo = VAR tt IN
+        tt <-- readState ;
+        IF ( tt < BufferSize )
+        THEN produces
+        END ;
+        tt <-- readState ;
+        IF ( tt > 0 )
+        THEN consumes
+        END
+    END
+END

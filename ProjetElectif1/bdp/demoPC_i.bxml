@@ -1,0 +1,164 @@
+<Machine name='demoPC_i' type='implementation'>
+<Abstraction>demoPC</Abstraction>
+<Imports>
+<Attr>
+<Pos l='8' c='1' s='7'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='8' c='9' s='10'/>
+</Attr>
+<Name>Parameters</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='8' c='21' s='16'/>
+</Attr>
+<Name>ProducerConsumer</Name>
+</Referenced_Machine>
+</Imports>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='demo'>
+<Attr>
+<Pos l='11' c='5' s='4' endLine='20'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='11' c='12' s='3'/>
+</Attr>
+<Variables>
+<Id value='tt' typref='2701647786'>
+<Attr>
+<Pos l='11' c='16' s='2'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='12' c='12' s='3'/>
+</Attr>
+<Name>
+<Id value='readState'>
+<Attr>
+<Pos l='12' c='16' s='9'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='tt' typref='2701647786'>
+<Attr>
+<Pos l='12' c='9' s='2'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='13' c='9' s='2'/>
+</Attr>
+<Condition>
+<Exp_Comparison op='&lt;'>
+<Attr>
+<Pos l='13' c='16' s='1'/>
+</Attr>
+<Id value='tt' typref='2701647786'>
+<Attr>
+<Pos l='13' c='13' s='2'/>
+</Attr>
+</Id>
+<Id value='BufferSize' typref='2701647786'>
+<Attr>
+<Pos l='13' c='18' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='14' c='14' s='8'/>
+</Attr>
+<Name>
+<Id value='produces'>
+<Attr>
+<Pos l='14' c='14' s='8'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+</Then>
+</If_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='16' c='12' s='3'/>
+</Attr>
+<Name>
+<Id value='readState'>
+<Attr>
+<Pos l='16' c='16' s='9'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='tt' typref='2701647786'>
+<Attr>
+<Pos l='16' c='9' s='2'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='17' c='9' s='2'/>
+</Attr>
+<Condition>
+<Exp_Comparison op='&gt;'>
+<Attr>
+<Pos l='17' c='16' s='1'/>
+</Attr>
+<Id value='tt' typref='2701647786'>
+<Attr>
+<Pos l='17' c='13' s='2'/>
+</Attr>
+</Id>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos l='17' c='18' s='1'/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='18' c='14' s='8'/>
+</Attr>
+<Name>
+<Id value='consumes'>
+<Attr>
+<Pos l='18' c='14' s='8'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+</TypeInfos>
+
+</Machine>

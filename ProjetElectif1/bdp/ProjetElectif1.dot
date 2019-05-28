@@ -1,0 +1,9 @@
+digraph {
+Parameters [ label=" Parameters " shape= box ]
+ProducerConsumer [ label=" ProducerConsumer " shape= box ]
+demoPC_i [ label=" demoPC\ndemoPC_i " shape= box ]
+
+"ProducerConsumer" -> "Parameters" [style= dotted ]
+"demoPC_i" -> "Parameters" []
+"demoPC_i" -> "ProducerConsumer" []
+}

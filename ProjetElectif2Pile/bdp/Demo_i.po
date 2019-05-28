@@ -1,0 +1,16 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+MaxSize : INTEGER & 0 <= MaxSize & ((MaxSize) : (NATURAL)) & (0 +1 <= MaxSize);
+btrue;
+values$1 : ((0) .. ((MaxSize - 1))) +-> NATURAL & dom(values$1) = ((0) .. ((MaxSize - 1))) & ((values$1) : (((((0) .. ((MaxSize - 1)))) --> (NATURAL)))) & ((ptr$1) : (((0) .. (MaxSize))));
+(((0) .. ((MaxSize - 1))) * ({0})) : ((0) .. ((MaxSize - 1))) +-> NATURAL;
+dom((((0) .. ((MaxSize - 1))) * ({0}))) = ((0) .. ((MaxSize - 1)));
+(((((0) .. ((MaxSize - 1))) * ({0}))) : (((((0) .. ((MaxSize - 1)))) --> (NATURAL))));
+((0) : (((0) .. (MaxSize))))
+END
+&
+THEORY EnumerateX
+END

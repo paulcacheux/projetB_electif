@@ -1,0 +1,601 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="mchcst"/>
+<Define name="aprp"/>
+<Define name="abs"/>
+<Define name="inv"/>
+<Define name="ass"/>
+<Define name="imlprp"/>
+<Define name="imprp">
+<Attr>
+<Pos c="1" l="9" s="10"/>
+</Attr>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" l="10" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\Parameters.bxml:1:2:1:1" value="BufferSize">
+<Attr>
+<Pos c="5" l="10" s="10"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\Parameters.bxml:1:2:1:2" value="NAT">
+<Attr>
+<Pos c="18" l="10" s="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Define>
+<Define name="imext">
+<Attr>
+<Pos c="1" l="11" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((current_state$1) : (NAT))">
+<Attr>
+<Pos c="19" l="12" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:3:1:1:1," suffix="1" value="current_state">
+<Attr>
+<Pos c="5" l="10" s="13"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:3:1:1:2" value="NAT">
+<Attr>
+<Pos c="21" l="12" s="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="(current_state$1 &lt;= BufferSize)">
+<Attr>
+<Pos c="41" l="12" s="2"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:3:1:2:1," suffix="1" value="current_state">
+<Attr>
+<Pos c="5" l="10" s="13"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:3:1:2:2" value="BufferSize">
+<Attr>
+<Pos c="44" l="12" s="10"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Proof_Obligation>
+<Comment>Importation dans une implantation</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Importation dans une implantation</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Importation dans une implantation</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Valuation dans une implantation</Comment>
+<Tag>ValuesLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="imprp"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Initialisation dans une implantation</Comment>
+<Tag>Initialisation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" l="11" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((current_state$1) : (NAT))">
+<Attr>
+<Pos c="19" l="12" s="1"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:4:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:3:1:1:1,,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:4:1:1:1," value="0">
+<Attr>
+<Pos c="5" l="10" s="13"/>
+</Attr>
+</Integer_Literal>
+<Id typref="3603043417" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:3:1:1:2" value="NAT">
+<Attr>
+<Pos c="21" l="12" s="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="(current_state$1 &lt;= BufferSize)">
+<Attr>
+<Pos c="41" l="12" s="2"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:4:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:3:1:2:1,,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:4:1:1:1," value="0">
+<Attr>
+<Pos c="5" l="10" s="13"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:3:1:2:2" value="BufferSize">
+<Attr>
+<Pos c="44" l="12" s="10"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>demo</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>demo</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op=">">
+<Attr>
+<Pos c="16" l="17" s="1"/>
+</Attr>
+<Binary_Exp op="+" typref="2701647786" tag=",C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:2:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:2:2:1:1:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:2:1:1:1">
+<Attr>
+<Pos c="5" l="10" s="13"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:2:2:1:2:1:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:2:1:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="5" l="10" s="13"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:2:2:1:2:1:2,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:2:1:1:1" value="1">
+<Attr>
+<Pos c="85" l="17" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Integer_Literal typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:2" value="0">
+<Attr>
+<Pos c="18" l="17" s="1"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Unary_Pred op="not">
+<Exp_Comparison op=">">
+<Attr>
+<Pos c="16" l="17" s="1"/>
+</Attr>
+<Binary_Exp op="+" typref="2701647786" tag=",C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:2:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:2:2:1:1:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:2:1:1:1">
+<Attr>
+<Pos c="5" l="10" s="13"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:2:2:1:2:1:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:2:1:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="5" l="10" s="13"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:2:2:1:2:1:2,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:2:1:1:1" value="1">
+<Attr>
+<Pos c="85" l="17" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Integer_Literal typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:2" value="0">
+<Attr>
+<Pos c="18" l="17" s="1"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos c="16" l="13" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:2:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="31" l="16" s="3"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:1:1:2" value="BufferSize">
+<Attr>
+<Pos c="18" l="13" s="10"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Exp_Comparison op=">">
+<Attr>
+<Pos c="16" l="17" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:2:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="31" l="16" s="3"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:2" value="0">
+<Attr>
+<Pos c="18" l="17" s="1"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="9">
+<Unary_Pred op="not">
+<Exp_Comparison op=">">
+<Attr>
+<Pos c="16" l="17" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:2:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="31" l="16" s="3"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:2" value="0">
+<Attr>
+<Pos c="18" l="17" s="1"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="10">
+<Unary_Pred op="not">
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos c="16" l="13" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:2:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="31" l="16" s="3"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:1:1:2" value="BufferSize">
+<Attr>
+<Pos c="18" l="13" s="10"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="11">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="12">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imprp"/>
+<Hypothesis/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_demo</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos c="16" l="13" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="31" l="16" s="3"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:1:1:2" value="BufferSize">
+<Attr>
+<Pos c="18" l="13" s="10"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Unary_Pred op="not">
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos c="16" l="13" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="31" l="16" s="3"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:1:1:2" value="BufferSize">
+<Attr>
+<Pos c="18" l="13" s="10"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Exp_Comparison op=">">
+<Attr>
+<Pos c="16" l="17" s="1"/>
+</Attr>
+<Binary_Exp op="+" typref="2701647786" tag=",C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:2:2:1:1:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:2:1:1:1">
+<Attr>
+<Pos c="5" l="10" s="13"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:2:2:1:2:1:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:2:1:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="5" l="10" s="13"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:2:2:1:2:1:2,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:2:1:1:1" value="1">
+<Attr>
+<Pos c="85" l="17" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Integer_Literal typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:2" value="0">
+<Attr>
+<Pos c="18" l="17" s="1"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Unary_Pred op="not">
+<Exp_Comparison op=">">
+<Attr>
+<Pos c="16" l="17" s="1"/>
+</Attr>
+<Binary_Exp op="+" typref="2701647786" tag=",C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:2:2:1:1:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:2:1:1:1">
+<Attr>
+<Pos c="5" l="10" s="13"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:2:2:1:2:1:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:2:1:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="5" l="10" s="13"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:2:2:1:2:1:2,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:2:1:1:1" value="1">
+<Attr>
+<Pos c="85" l="17" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Integer_Literal typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:2" value="0">
+<Attr>
+<Pos c="18" l="17" s="1"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos c="16" l="13" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="31" l="16" s="3"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:1:1:2" value="BufferSize">
+<Attr>
+<Pos c="18" l="13" s="10"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Exp_Comparison op=">">
+<Attr>
+<Pos c="16" l="17" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="31" l="16" s="3"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:2" value="0">
+<Attr>
+<Pos c="18" l="17" s="1"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Unary_Pred op="not">
+<Exp_Comparison op=">">
+<Attr>
+<Pos c="16" l="17" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:3:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="31" l="16" s="3"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:4:1:1:2" value="0">
+<Attr>
+<Pos c="18" l="17" s="1"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Unary_Pred op="not">
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos c="16" l="13" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:2:1,,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:2:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:2:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1,C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:5:1:1:1,C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:1:1:1" suffix="1" value="current_state">
+<Attr>
+<Pos c="31" l="16" s="3"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:4:1:1:1:2:1:2:1:1:2" value="BufferSize">
+<Attr>
+<Pos c="18" l="13" s="10"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="9">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="2701647786">
+<Id tag="C:\Users\Paul\Documents\Projets\AtelierB\ProjetElectif1\bdp\demoPC_i.bxml:1:5:1:1" value="INTEGER"/>
+</Type>
+<Type id="2701647786">
+<Id tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\Parameters.bxml:1:4:1:1" value="INTEGER"/>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\Parameters.bxml:1:4:2:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="2701647786">
+<Id tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:6:1:1" value="INTEGER"/>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/Paul/Documents/Projets/AtelierB/ProjetElectif1/bdp\ProducerConsumer.bxml:1:6:2:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

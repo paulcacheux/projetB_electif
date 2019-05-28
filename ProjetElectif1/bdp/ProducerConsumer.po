@@ -1,0 +1,30 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(8) & _f(13) & consumes.2,(_f(3) & _f(6) => _f(15));
+_f(1) & _f(2) & _f(8) & _f(13) & consumes.1,(_f(3) & _f(4) => _f(14));
+_f(1) & _f(2) & _f(8) & _f(10) & produces.2,(_f(3) & _f(6) => _f(12));
+_f(1) & _f(2) & _f(8) & _f(10) & produces.1,(_f(3) & _f(4) => _f(11));
+_f(1) & _f(2) & Initialisation.2,(_f(3) & _f(6) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) & _f(4) => _f(5))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((BufferSize) : (NAT));
+"Invariant is preserved";
+"Check invariant ((current_state) : (NAT))";
+((0) : (NAT));
+"Check invariant (current_state <= BufferSize)";
+(0 <= BufferSize);
+((current_state) : (NAT)) & (current_state <= BufferSize);
+btrue;
+(current_state +1 <= BufferSize);
+(((current_state + 1)) : (NAT));
+((current_state + 1) <= BufferSize);
+(0 +1 <= current_state);
+(((current_state - 1)) : (NAT));
+((current_state - 1) <= BufferSize);
+((current_state) : (NAT))
+END
+&
+THEORY EnumerateX
+END

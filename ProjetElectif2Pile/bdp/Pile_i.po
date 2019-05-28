@@ -1,0 +1,39 @@
+THEORY ProofList IS
+_f(1) & _f(6) & _f(7) & _f(8) & _f(9) & _f(21) & WellDefinedness_peek.2,(_f(22) => _f(23));
+_f(1) & _f(6) & _f(7) & _f(8) & _f(9) & _f(21) & WellDefinedness_peek.1,(_f(22) => _f(19));
+_f(1) & _f(6) & _f(7) & _f(8) & _f(9) & _f(21) & WellDefinedness_pop.2,(_f(22) => _f(23));
+_f(1) & _f(6) & _f(7) & _f(8) & _f(9) & _f(21) & WellDefinedness_pop.1,(_f(22) => _f(19));
+_f(1) & _f(6) & _f(7) & _f(8) & _f(9) & _f(16) & peek.1,(_f(17) & _f(18) => _f(19));
+_f(1) & _f(6) & _f(7) & _f(8) & _f(9) & _f(16) & pop.1,(_f(17) & _f(18) => _f(19));
+_f(1) & _f(2) & ValuesLemmas.2,(_f(3) => _f(5));
+_f(1) & _f(2) & ValuesLemmas.1,(_f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+btrue;
+"Valuation is correct";
+((10) : (NATURAL));
+(0 +1 <= 10);
+MaxSize : INTEGER & 0 <= MaxSize & ((MaxSize) : (NATURAL)) & (0 +1 <= MaxSize);
+((MaxSize) = (10));
+values : ((0) .. ((MaxSize - 1))) +-> NATURAL & dom(values) = ((0) .. ((MaxSize - 1))) & ((values) : (((((0) .. ((MaxSize - 1)))) --> (NATURAL)))) & ((ptr) : (((0) .. (MaxSize))));
+((values) = (values$1)) & ((ptr) = (ptr$1));
+((ptr) : (((0) .. ((MaxSize - 1))))) & value : INTEGER & 0 <= value & ((value) : (NATURAL));
+((ptr$1) : (((0) .. ((MaxSize - 1)))));
+value : INTEGER;
+0 <= value;
+((value) : (NATURAL));
+(0 +1 <= ptr) & ((value) = (value));
+((value$1) = (value));
+(0 +1 <= ptr$1);
+"Instruction Well Definess";
+(((ptr$1 - 1)) : (dom(values$1)));
+((values) = (values$1));
+(0 +1 <= ptr);
+"Well definedness";
+((values$1) : (((dom(values$1)) +-> (ran(values$1)))))
+END
+&
+THEORY EnumerateX
+END

@@ -1,0 +1,48 @@
+﻿THEORY BalanceX IS
+  Pile,8,0,0,7,1,0,0;
+  Initialisation,2,0,0,1,1,0,0;
+  WellDefinedness_peek,2,0,0,2,0,0,0;
+  WellDefinedness_pop,2,0,0,2,0,0,0;
+  pop,1,0,0,1,0,0,0;
+  push,1,0,0,1,0,0,0
+END
+&
+THEORY ProofState IS
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(1)
+END
+&
+THEORY MethodList IS
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(1),(?;0)
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  PRVersion("svn")(CLT == "svn")
+END

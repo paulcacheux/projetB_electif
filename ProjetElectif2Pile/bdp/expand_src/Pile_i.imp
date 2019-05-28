@@ -1,0 +1,28 @@
+﻿/* Pile_i
+ * Author: Paul
+ * Creation date: 21/05/2019
+ */
+
+IMPLEMENTATION Pile_i
+REFINES Pile
+VALUES
+    MaxSize = 10
+INITIALISATION
+    values := ( 0 .. MaxSize - 1 ) * { 0 } ;
+    ptr := 0
+OPERATIONS
+    push ( value ) = BEGIN
+        values ( ptr ) := value ;
+        ptr := ptr + 1
+    END ;
+
+    value <-- pop = BEGIN
+        ptr := ptr - 1 ;
+        value := values ( ptr )
+    END ;
+
+    value <-- peek = BEGIN
+        value := values ( ptr - 1 )
+    END
+
+ END

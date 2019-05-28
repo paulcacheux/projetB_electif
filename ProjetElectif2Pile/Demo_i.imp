@@ -1,0 +1,16 @@
+/* Demo_i
+ * Author: Paul
+ * Creation date: 22/05/2019
+ */
+
+IMPLEMENTATION Demo_i
+REFINES Demo
+IMPORTS
+    Pile, BASIC_IO
+
+OPERATIONS
+    demo = BEGIN 
+       push(12);
+       printf(peek);
+    END
+END
