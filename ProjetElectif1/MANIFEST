@@ -1,0 +1,6 @@
+<project>
+ <add_file path="Parameters.mch"/>
+ <add_file path="ProducerConsumer.mch"/>
+ <add_file path="demoPC.mch"/>
+ <add_file path="demoPC_i.imp"/>
+</project>

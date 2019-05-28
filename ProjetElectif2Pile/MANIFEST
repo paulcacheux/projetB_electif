@@ -1,0 +1,7 @@
+<project>
+ <add_file path="Demo.mch"/>
+ <add_file path="Demo_i.imp"/>
+ <add_file path="Pile.mch"/>
+ <add_file path="Pile_i.imp"/>
+ <add_file path=""/>
+</project>
